@@ -1,5 +1,7 @@
 package org.fevzi;
 
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
@@ -10,11 +12,11 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Random gen = new Random(System.currentTimeMillis());
 
-        int num = 0, guess = 0;
+        int num, guess;
         boolean running = true;
         String answer;
 
-        while (running == true) {
+        while (running) {
             running = false;
             num = gen.nextInt(100) + 1;
             System.out.println("Guess a number between 1 and 100.");
@@ -23,7 +25,7 @@ public class Main {
                 if (guess > num) {
                     System.out.println("Your guess is too high, try again!");
                     guess = scan.nextInt();
-                } else if (guess < num) {
+                } else {
                     System.out.println("Your guess is too low, try again!");
                     guess = scan.nextInt();
                 }
