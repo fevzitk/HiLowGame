@@ -31,16 +31,17 @@ public class Main {
                 }
             }
             num = -1;
-            System.out.println("You guessed it!  Would you like to play again? [y/n]");
+            System.out.println("You guessed it!");
             while (num == -1) {
                 answer = scan.nextLine();
                 if (answer.equals("y")) {
                     num = 0;
                     running = true;
-                }
-                if (answer.equals("n")) {
+                } else if (answer.equals("n")) {
                     num = 0;
                     System.out.println("Thanks for playing!");
+                } else {
+                    System.out.println("Would you like to play again? [y/n]");
                 }
             }
         }
